@@ -11,7 +11,7 @@ export default React.createClass({
         return (
             <View style={{width:this.props.width,height:this.props.height}}>
                 <WebView
-                    html={this._getHtml()}/>
+                    source={this._getHtml()}/>
             </View>
         )
     },
