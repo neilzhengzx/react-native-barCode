@@ -3,7 +3,8 @@
  */
 'use strict';
 
-import React,{View,WebView,Text}  from 'react-native';
+import React from 'react';
+import { View,WebView,Text } from 'react-native';
 import qr from 'qr.js';
 
 function renderCanvas(canvas) {
