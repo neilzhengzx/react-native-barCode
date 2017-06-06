@@ -62,9 +62,9 @@ export default React.createClass({
     render: function () {
         let size = this.props.size;
         return (
-            <View style={{height: size, width: size}}>
+            <View style={{flex:1}}>
                 <WebView
-                    source={this._getHtml()}
+                    source={{html:this._getHtml()}}
                 />
             </View>
         );

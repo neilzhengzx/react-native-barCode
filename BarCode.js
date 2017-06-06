@@ -9,9 +9,10 @@ const IFT = `(function($){JsBarcode=function(image,content,options,validFunction
 export default React.createClass({
     render() {
         return (
-            <View style={{width:this.props.width,height:this.props.height}}>
+            <View style={{flex:1}}>
                 <WebView
-                    source={this._getHtml()}/>
+                  source={{html:this._getHtml()}}
+                />
             </View>
         )
     },
@@ -22,7 +23,7 @@ export default React.createClass({
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     </head>
                    <body style="height: 100%;width: 100%;margin: 0;padding: 0;overflow: hidden">
-                    <canvas height="${this.props.height}" width="${this.props.width}"></canvas><script>
+                    <canvas height=225 width=90></canvas><script>
              ${IFT}
              var PIXEL_RATIO = (function () {
                 var ctx = document.createElement("canvas").getContext("2d"),
